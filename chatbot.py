@@ -1,16 +1,15 @@
 import random
-
 import gradio as gr
 import nltk
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-# Download NLTK resources
+# Downloading NLTK resources
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('punkt_tab')
 nltk.download('averaged_perceptron_tagger_eng')
 
-# Load the Salesforce CodeGen model and tokenizer
+# Load the Salesforce CodeGen model and tokenizer with Hugging Face 
 tokenizer = AutoTokenizer.from_pretrained("Salesforce/codegen-350M-mono")
 model = AutoModelForCausalLM.from_pretrained("Salesforce/codegen-350M-mono")
 
@@ -59,4 +58,4 @@ with gr.Blocks(css="styles.css") as iface:  # Use external CSS
 
     button.click(generate_code, inputs=[textbox, dropdown], outputs=output)
 
-iface.launch()
+iface.launch(share=True)  
