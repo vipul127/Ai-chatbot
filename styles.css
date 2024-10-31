@@ -1,0 +1,120 @@
+/* Basic Container Styling */
+.gradio-container {
+    width: 800px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif; /* Choose your preferred font */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center horizontally */
+    background-color: #282c34; /* Set dark background color */
+    color: #ffffff; /* Set default text color to white */
+}
+
+/* Title Styling */
+.gradio-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Input Components */
+.gradio-textbox {
+    width: calc(100% - 22px); /* Account for padding and border */
+    height: 120px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    resize: vertical;
+    font-size: 1em;
+    background-color: #333740; /* Darker background for textbox */
+    color: #ffffff; /* White text color for textbox */
+}
+
+.gradio-dropdown {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    background-color: #333740; /* Darker background for dropdown */
+    color: #ffffff; /* White text color for dropdown */
+}
+
+/* Button Styling */
+.gradio-button {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%; /* Make button take full width */
+}
+
+.gradio-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Output Code Block */
+.gradio-code {
+    background-color: #21252b; /* Dark background for code block */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    overflow: auto;
+    white-space: pre-wrap;
+    font-family: 'Courier New', monospace; /* Use a monospace font for code */
+    font-size: 1em;
+    color: #ffffff; /* White text color for code */
+}
+
+/* Panel for output (above the input components) */
+#output-panel { 
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: auto;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Wrapper for language dropdown and button */
+#input-wrapper {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    width: 100%; /* Make wrapper take full container width */
+    justify-content: space-between; /* Distribute space between dropdown and button */
+}
+
+#thinking-animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #007bff; /* Blue color for the spinner */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

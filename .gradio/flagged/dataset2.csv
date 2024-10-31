@@ -1,0 +1,18 @@
+Description,Programming Language,Code,timestamp
+"write a code for 3 sum problem
+",Python,"```Python
+//Python
+write a code for 3 sum problem
+
+""""""
+
+def threeSum(nums):
+    nums.sort()
+    result = []
+    for i in range(len(nums)):
+        if i > 0 and nums[i] == nums[i-1]:
+            continue
+        left, right = i+1, len(nums)-1
+        while left < right:
+            total = nums[i] + nums[left] + nums
+```",2024-10-29 19:35:18.920410
